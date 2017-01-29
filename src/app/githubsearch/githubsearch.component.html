@@ -1,0 +1,50 @@
+<div class="glass-container">
+  <h1 class="display-4 text-center">Start typing below to search for GitHub User</h1>
+  <form class="form-inline">
+    <input class="form-control search" type="text" placeholder="Search"
+    name="userlogin"
+    [(ngModel)]="userlogin"
+    (keyup)="search()">
+  </form>
+</div>
+<div class="row user-wrapper"
+  *ngIf="user">
+  <div class="col-12 header">
+    Search Results
+  </div>
+  <div class="col-md-3 avatar-container ">
+    <img class="img-thumbnail" [attr.src]="user.avatar_url" alt="User Image">
+  </div>
+  <div class="col-md-9 user-info">
+      <h3>{{user.name}}</h3>
+      <b>Username:</b> {{user.login}}
+    <p *ngIf="user.email">
+      <b>Email:</b> {{user.email}}
+    </p>
+    <p *ngIf="user.company">
+      <b>Works at</b> {{user.company}}
+    </p>
+    <p *ngIf="user.location">
+      <b>Location</b> {{user.location}}
+    </p>
+    <p *ngIf="user.hireable">
+      You can <a [attr.href]="user.url">hire</a> this developer
+    </p>
+    <p *ngIf="user.bio">
+      <b>Bio:</b><br/>
+      <i>{{user.bio}}</i>
+    </p>
+  </div>
+</div>
+<div class="row user-wrapper"
+  *ngIf="repos">
+  <div class="col-12 header">
+    User Repositories
+  </div>  
+  <div class="repo col-12"
+  *ngFor="let repo of repos">
+      <h4><a [attr.href]="repo.html_url" target="_blank">{{repo.name}}</a></h4>    
+      <p *ngIf="!repo.description">No description provided</p>
+      <p>{{repo.description}}</p>  
+  </div>
+</div>

@@ -1,0 +1,45 @@
+.glass-container{
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.37);
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.07);
+    margin:10px;
+}
+.row.user-wrapper {
+    background: white;
+    color: #464a4c;
+    box-shadow: -3px 2px 4px 0px rgba(0, 0, 0, 0.26);
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+.user-wrapper .header {
+    padding: 20px;
+    background: #f7f7f7;
+    border-bottom: 1px solid hsla(0, 0%, 90%, 1);
+    margin-bottom: 20px;
+    color: #636c72;
+    font-size: 21px;
+    border-radius: 3px 3px 0 0;
+}
+.row{
+    margin: 10px 0;
+}
+input.form-control.search {
+    width: 90%;
+    margin: 20px auto;
+    display: inline-block;
+}
+
+.user-info p{
+    margin: 0;
+}
+img.img-thumbnail {
+    max-height: 300px;
+}
+.repo.col-12 {
+    border-bottom: 1px solid #eceeef;
+    padding: 10px;
+}
+.repo.col-12:hover {
+    background: hsla(0, 0%, 97%, 1);
+}
